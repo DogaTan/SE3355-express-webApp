@@ -1,0 +1,246 @@
+body {
+  margin-bottom: 50px !important;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #29333d;
+  margin-bottom: 20px;
+}
+
+.container-fluid{
+  justify-content: space-around !important;
+}
+
+.navbar-brand {
+  padding-inline: 1rem;
+  color: black !important;
+  background-color: yellow;
+  font-weight: bold;
+  font-size: 1.5rem !important;
+}
+
+.navbar input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 0;
+  border: none;
+}
+
+.form-control{
+  background-color: #2f3943 !important; 
+  color: whitesmoke !important; 
+  border: none !important;
+}
+
+/* Placeholder yazı rengini değiştirme */
+.form-control::placeholder {
+  color: #ccc !important; 
+}
+
+.formWidth{
+  width: 50%;
+}
+
+
+.navbar button {
+  background-color: #343a40;
+  color: white;
+  border: 1px solid #ccc;
+}
+
+.navbar button:hover {
+  background-color: #007bff;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-color: white;
+  border-radius: 3px;
+}
+
+/* Input Group for Search */
+.input-group {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.input-group .form-control {
+  border-right: none;
+}
+
+.input-group .btn {
+  border-left: none;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Hafif bir gölge */
+  width: 92% !important;
+}
+
+.btn-secondary{
+  background-color: #343a40 !important;
+  font-weight: bold;
+}
+
+.btn-secondary:hover{
+  background-color: #007bff !important;
+}
+.dropdown-item {
+  font-weight: bold !important; 
+  color: #0e3b61 !important;
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.dropdown-item:hover {
+  background-color: #007bff;
+  color: white; 
+}
+
+/* Kategoriler */
+#categoryList .list-group-item {
+  border: none;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+#categoryList .list-group-item .text-muted {
+  font-size: 0.9rem;
+  color: #0e3b61; 
+}
+
+
+
+.categoryLink {
+  text-decoration: none;
+  color: #0e4f90;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.categoryLink:hover {
+  color: #0f6dd0;
+  transform: translateY(-3px);
+}
+
+.category-count {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-left: 5px;
+}
+
+/* Ürünler */
+#productList .card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding-top: 0.5rem;
+}
+
+#productList .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#productList .card-img-top {
+  height: 150px;
+  object-fit: contain;
+}
+
+.img-fluid {
+  max-width: 60% !important;
+}
+
+.product-image-container {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100%; 
+}
+
+.product-image {
+  max-width: 100%; 
+  max-height: 400px; 
+  object-fit: contain; 
+}
+
+#productList .card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.mb-3 {
+  border-bottom: 1px solid grey;
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.mb-4{
+  color: #1840A0 !important;
+  font-weight: 700;
+}
+
+/* Responsive (media queries) */
+@media (max-width: 768px) {
+  .navbar input[type="text"] {
+    width: 100%;
+  }
+
+  .product-image-container {
+    margin-bottom: 20px;
+  }
+  .mb-3{
+    margin-top: 1rem;
+  }
+
+  .dropdown-menu {
+    max-height: 200px; 
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .formWidth{
+    width: 100%;
+  }
+
+  form .me-2{
+    width: 100% !important;
+  }
+
+  .navbar input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  
+  .input-group {
+    flex-direction: row;
+    width: 100%;
+  }
+}

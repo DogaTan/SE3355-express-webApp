@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= product.description %> - Detaylar</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+  <%- include('navbar'); %>
+
+  <div class="container mt-4">
+    <div class="row">
+      <h3 class="mb-3"><%= product.description %></h3>
+      <!-- Ürün resmi -->
+      <div class="col-md-6 product-image-container">
+        <img src="/<%= product.image %>" class="img-fluid rounded product-image" alt="<%= product.description %>">
+      </div>
+
+      <!-- Ürün detayları -->
+      <div class="col-md-6">
+        
+        <h4 class="mb-4"><%= product.price %> TL</h4>
+
+        <table class="table table-bordered">
+          <tbody>
+            <tr>
+              <th scope="row">İlan No</th>
+              <td><%= product.ad_no %></td>
+            </tr>
+            <tr>
+              <th scope="row">Şehir</th>
+              <td><%= product.city %></td>
+            </tr>
+            <tr>
+              <th scope="row">Kategori</th>
+              <td><%= product.category %></td>
+            </tr>
+            <tr>
+              <th scope="row">Ekstra Bilgi</th>
+              <td>Varsa ürünle ilgili diğer bilgiler burada gösterilebilir.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <a href="/" class="btn btn-secondary mt-3">Ana Sayfaya Dön</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="/scripts.js"></script>
+</body>
+</html>
